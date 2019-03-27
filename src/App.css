@@ -5,15 +5,19 @@
   padding-left: 0;
 }
 
-/* For demo */
 .ant-carousel .slick-slide {
-  text-align: center;
-  height: 200px;
-  line-height: 160px;
-  background: #364d79;
+  padding-bottom: 20px;
+  padding-top: 5px;
+  background: #666;
   overflow: hidden;
 }
+.ant-carousel {
+  margin-bottom: 20px;
+}
 
-.ant-carousel .slick-slide h3 {
-  color: #fff;
+.userCard {
+  text-align: justify;
+  margin: 20px 0;
+  box-shadow: 0 0 8px 4px rgba(49, 196, 167, 0.04);
+  margin-left: 20px;
 }

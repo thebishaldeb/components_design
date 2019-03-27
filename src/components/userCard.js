@@ -8,9 +8,8 @@ import Avatar from "../ui-antd/components/Avatar";
 class UserCard extends Component {
   render() {
     let seller = this.props.seller;
-    console.log(seller);
     return (
-      <Card style={{ textAlign: "justify", margin: "20px 0",boxShadow: "0 0 8px 4px rgba(49, 196, 167, 0.04)" }}>
+      <Card className="userCard">
         <Row>
           <Col span={4}>
             <Avatar />
@@ -50,16 +49,28 @@ class UserCard extends Component {
             </Button>
           </Col>
         </Row>
-        <br/>
-        <h4 style={{
-                fontSize: "14px"
-              }}>About</h4>
-        <p style={{
-                fontSize: "12px"
-              }}>{seller.About}</p>
-        <h4 style={{
-                fontSize: "14px"
-              }}>Web references</h4>
+        <br />
+        <h4
+          style={{
+            fontSize: "14px"
+          }}
+        >
+          About
+        </h4>
+        <p
+          style={{
+            fontSize: "12px"
+          }}
+        >
+          {seller.About}
+        </p>
+        <h4
+          style={{
+            fontSize: "14px"
+          }}
+        >
+          Web references
+        </h4>
         <strong>
           {seller.references.map(item => (
             <strong>

@@ -9,9 +9,11 @@ class ProductCard extends Component {
     return (
       <Card style={{ textAlign: "justify" }}>
         <Carousel>
-            {/* {product.image.map((item)=>( */}
-                <div></div>
-            {/* ))} */}
+          {product.images.map(item => (
+            <div>
+              <img src={item} style={{ width: "100%" }} />
+            </div>
+          ))}
         </Carousel>
         <Row>
           <Col span={12}>
