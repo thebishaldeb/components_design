@@ -1,0 +1,70 @@
+@import 'antd';
+
+// Setting Variables
+@primary-color: #23b195; // primary color for all components
+@secondary-color: #fff; // primary color for all components
+@tertiary-color: #211f1f;
+// Menu
+@menu-bg: @primary-color;
+@menu-item-color: #fff;
+@menu-item-active-border-width: 3px;
+@menu-highlight-color: @secondary-color;
+@border-radius-base: 3px; // major border radius
+
+
+
+
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.ant-menu-horizontal {
+  border-bottom: none;
+}
+
+.ant-menu-horizontal>.ant-menu-item>a {
+  font-size: 1.4em;
+}
+
+.ant-menu-horizontal>.ant-menu-item-selected>a {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.ant-pagination {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media print {
+  .no-print {
+    display: none;
+  }
+}
+
+.no-print {
+  background: @tertiary-color;
+  color: @secondary-color  !important;
+  padding: 2% 5%;
+}
+
+.no-print h3 {
+  color: #fff !important;
+}
+
+.no-print li {
+  list-style: none;
+  padding: 2% 0;
+}
+
+.header {
+  background: @primary-color;
+}
+
+#content {
+  background: @secondary-color;
+}
