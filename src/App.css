@@ -21,3 +21,31 @@
   box-shadow: 0 0 8px 4px rgba(49, 196, 167, 0.04);
   margin-left: 20px;
 }
+.AccDetItem:hover {
+  color: #23b195;
+}
+
+.ant-menu-item-selected.AccDetItem {
+  background: #fff !important;
+  color: #23b195;
+  border-left: 2px solid #23b195;
+  width: 100% !important;
+}
+.ant-button.checked {
+  background: #23b195 !important;
+  color: #fff;
+}
+
+.btn {
+  color: #23b195;
+  border: #23b195 0.5px solid;
+  width: 33%;
+}
+
+.btnActive,
+.btn:hover {
+  background-color: #23b195 !important;
+  color: white !important;
+  border: #23b195 0.5px solid !important;
+  width: 33%;
+}

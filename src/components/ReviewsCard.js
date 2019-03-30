@@ -29,7 +29,7 @@ class ReviewsCard extends Component {
           <Rate
             disabled
             defaultValue={this.averageReviews(reviews.properties)}
-            style={{ color: "#219653", fontSize: "10px", margin: "0 4px" }}
+            style={{ color: "#23b195", fontSize: "10px", margin: "0 4px" }}
           />{" "}
           <h5 style={{ display: "inline" }}>
             {this.averageReviews(reviews.properties)}
@@ -47,7 +47,7 @@ class ReviewsCard extends Component {
                   disabled
                   defaultValue={value}
                   style={{
-                    color: "#219653",
+                    color: "#23b195",
                     fontSize: "10px",
                     margin: "0 4px"
                   }}

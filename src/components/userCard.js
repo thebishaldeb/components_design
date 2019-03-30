@@ -24,12 +24,12 @@ class UserCard extends Component {
             >
               {seller.name}
               <br />
-              <h5 style={{ color: "#219653", fontSize: "10px" }}>
+              <h5 style={{ color: "#23b195", fontSize: "10px" }}>
                 {" "}
                 <Rate
                   disabled
                   defaultValue={seller.rating}
-                  style={{ color: "#219653", fontSize: "10px" }}
+                  style={{ color: "#23b195", fontSize: "10px" }}
                 />
                 <br />
                 Read Reviews ({seller.reviewsCount})
@@ -39,8 +39,8 @@ class UserCard extends Component {
           <Col span={8}>
             <Button
               style={{
-                color: "#219653",
-                border: "#219653 0.5px solid",
+                color: "#23b195",
+                border: "#23b195 0.5px solid",
                 float: "right"
               }}
               ghost
@@ -85,8 +85,8 @@ class UserCard extends Component {
         <Button
           color="primary"
           style={{
-            color: "#219653",
-            border: "#219653 0.5px solid",
+            color: "#23b195",
+            border: "#23b195 0.5px solid",
             margin: "0 30%",
             width: "40%"
           }}

@@ -11,7 +11,7 @@ class ProductCard extends Component {
         <Carousel>
           {product.images.map(item => (
             <div>
-              <img src={item} style={{ width: "100%" }} />
+              <img src={item} alt="" style={{ width: "100%" }} />
             </div>
           ))}
         </Carousel>
@@ -28,7 +28,7 @@ class ProductCard extends Component {
           <Col span={12}>
             <a
               href="#"
-              style={{ float: "right", color: "#219653", fontSize: "14px" }}
+              style={{ float: "right", color: "#23b195", fontSize: "14px" }}
             >
               COMPARE PRODUCT
             </a>

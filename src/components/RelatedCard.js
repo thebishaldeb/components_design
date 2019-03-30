@@ -14,7 +14,7 @@ class RelatedCard extends Component {
           description={<h5>&#8377;{list.rent} per day</h5>}
         />
         <Meta
-          style={{ marginTop: "20px", padding:"0" }}
+          style={{ marginTop: "20px", padding:"0"}}
           avatar={<Avatar/>}
           title={
             <h4
@@ -29,14 +29,14 @@ class RelatedCard extends Component {
               <Rate
                 disabled
                 defaultValue={list.rating}
-                style={{ color: "#219653", fontSize: "6px" }}
+                style={{ color: "#23b195", fontSize: "6px" }}
               />
               <div
                 style={{ 
                   position:"absolute",
                   right: "5px",
                   bottom: "40px",
-                  float: "right", color: "#219653", fontSize: "12px" }}
+                  float: "right", color: "#23b195", fontSize: "12px" }}
               >
                 <Icon
                   type="car"
