@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../App.css";
+// import { Link } from "react-router-dom";
 import { Rate, List, Row, Col } from "antd";
 import Card from "../ui-antd/components/Card";
 import Avatar from "../ui-antd/components/Avatar";
@@ -57,10 +58,11 @@ class ReviewsCard extends Component {
           ))}
         </Row>
         <List
+          style={{ marginTop: "30px" }}
           itemLayout="horizontal"
           dataSource={reviews.reviewers}
           renderItem={item => (
-            <List.Item>
+            <List.Item style={{ marginBottom: "20px" }}>
               <List.Item.Meta
                 avatar={<Avatar />}
                 title={
@@ -84,6 +86,9 @@ class ReviewsCard extends Component {
             </List.Item>
           )}
         />
+        {/* <Link to=""> */}
+          <h3 style={{ color: "#23b195" }}>Show all reviews</h3>
+        {/* </Link> */}
       </Card>
     );
   }

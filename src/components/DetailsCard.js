@@ -7,17 +7,16 @@ class DetailsCard extends Component {
     return (
       <Row
         style={{
-          margin: "20px",
           marginBottom: "30px",
           border: "1px solid #ddd",
           minWidth: "100%"
         }}
       >
-        <Col span={8}>
+        <Col span={10}>
           <div style={{ width: "100%" }}>
             <img
               style={{
-                height: "150px",
+                height: "160px",
                 width: "100%",
                 paddingRight: "20px"
               }}
@@ -25,7 +24,7 @@ class DetailsCard extends Component {
             />
           </div>
         </Col>
-        <Col span={16} style={{ paddingTop: "10px" }}>
+        <Col span={14} style={{ paddingTop: "10px" }}>
           {this.props.item.nature === "On Rent" ? (
             <h6
               style={{
@@ -52,18 +51,18 @@ class DetailsCard extends Component {
             </h6>
           )}
           <h4>{this.props.item.name}</h4>
-          <h6>
+          <h5>
             <span
               style={{
                 background: "#23b195",
                 color: "white",
-                padding: "1px"
+                padding: "0px 6px 1px 7px"
               }}
             >
               {this.props.item.rating} <Icon type="star" theme="filled" />
             </span>
             <span style={{ color: "#23b195" }}> ({this.props.item.reviews})</span>
-          </h6>
+          </h5>
           <h5 style={{ marginBottom: "25px" }}>
             <strong>&#8377; {this.props.item.rent} per day</strong>
           </h5>
@@ -75,7 +74,7 @@ class DetailsCard extends Component {
               margin: "0 2.5%"
             }}
           >
-            View Listing
+            <span>{this.props.buttonText} Listing</span>
           </Button>
           <Button
             style={{

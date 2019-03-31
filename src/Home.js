@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Row, Col, Breadcrumb } from "antd";
+import { Row, Col, Breadcrumb, Layout } from "antd";
 import Card from "./ui-antd/components/Card";
 import UserCard from "./components/userCard";
 import ProductCard from "./components/ProductCard";
@@ -102,7 +102,7 @@ class App extends Component {
           rent: 12,
           seller: "Rai",
           image:
-            "https://free4kwallpapers.com/uploads/wallpaper-cache/naruto-kyuubi-mode-3-1024x768-MM-100.jpg",
+            "https://free4kwallpapers.com/uploads/wallpaper-cache/naruto-vsmadara-uchiha-wallpaper-1024x768-MM-100.jpg",
           rating: 4.5
         }
       ]
@@ -131,14 +131,13 @@ class App extends Component {
         <h1
           style={{
             backgroundColor: "rgba(35, 177, 149,0.2)",
-            padding: "10px 20px",
+            padding: "10px 7%",
             fontSize: "25px"
           }}
         >
           {this.state.product.title}
         </h1>
-        <div className="container">
-          <Row>
+          <Row style={{ padding: "0 7%" }}>
             <Col lg={16} md={13} sm={24}>
               <ProductCard product={this.state.product} />
               <ReviewsCard reviews={this.state.product.reviews} />
@@ -151,7 +150,6 @@ class App extends Component {
               />
               <UserCard seller={this.state.product.seller} />
             </Col>
-            <hr />
             <Col span={24}>
               <Card>
                 <h2 style={{ fontWeight: "bold" }}>
@@ -162,7 +160,6 @@ class App extends Component {
                 />
               </Card>
             </Col>
-            <hr />
             <Col span={24}>
               <Card>
                 <h2 style={{ fontWeight: "bold" }}>
@@ -175,7 +172,6 @@ class App extends Component {
             </Col>
           </Row>
         </div>
-      </div>
     );
   }
 }

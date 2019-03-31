@@ -5,7 +5,7 @@ import { Icon } from "antd";
 const RightArrow = (props) => {
   return (
     <div className="nextArrow" onClick={props.goToNextSlide}>
-      <Icon type="right-circle" />
+   <h1><Icon type="right-circle" /></h1>
     </div>
   );
 }

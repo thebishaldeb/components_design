@@ -1,14 +1,12 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Row, Col, Button, Switch, List, Icon, Card } from "antd";
+import { Row, Col, Button, Switch } from "antd";
 // import Card from "./ui-antd/components/Card";
 import RightArrow from "./components/RightArrow";
 import LeftArrow from "./components/LeftArrow";
-import ReviewsCard from "./components/ReviewsCard";
 import FilterCards from "./components/FilterCards";
 import SuggestedCardList from "./components/SuggestedCardList";
 import SimpleCard from "./components/SimpleCard";
-const { Meta } = Card;
 class Catalogue extends Component {
   state = {
     productlist: [
@@ -36,7 +34,7 @@ class Catalogue extends Component {
           "https://free4kwallpapers.com/uploads/wallpaper-cache/naruto-kyuubi-mode-3-1024x768-MM-100.jpg",
         rating: 3.9
       }
-    ]
+    ],
   };
 
   list = [
@@ -51,7 +49,7 @@ class Catalogue extends Component {
         <div style={{ padding: "0 20px" }} />
         <div className="container">
           <Row>
-            <div style={{ padding: "0 10%", overflow:"hidden" }}>
+            <div style={{ padding: "0 10%", overflow: "hidden" }}>
               <Col lg={20} md={24} style={{ paddingBottom: "10px" }}>
                 <Button className="filterButtons">Category</Button>
                 <Button className="filterButtons">Brand</Button>
@@ -66,34 +64,40 @@ class Catalogue extends Component {
                 </span>
               </Col>
             </div>
-            <hr style={{border:"0.5px solid #ddd", marginBottom: "15px"}}/>
+            <hr style={{ border: "0.5px solid #ddd", marginBottom: "15px" }} />
             <div style={{ padding: "0 10%" }}>
               <Col span={24}>
-                <h2 style={{ fontWeight: "bold", margin:"15px 0" }}>
+                <h2 style={{ fontWeight: "bold", margin: "15px 0" }}>
                   <strong>Explore gear for your project or occasion</strong>
                 </h2>
                 <Row gutter={16}>
-                 <LeftArrow /> {this.list.map(item => (
+                  <LeftArrow />{" "}
+                  {this.list.map(item => (
                     <Col md={6} sm={12}>
                       <FilterCards item={item} />
-                      </Col>
-                  ))} <RightArrow />
+                    </Col>
+                  ))}{" "}
+                  <RightArrow />
                 </Row>
               </Col>
               <b />
               <Col span={24}>
-                <h2 style={{ fontWeight: "bold", margin:"15px 0"  }}><strong>Most popular products</strong></h2>
+                <h2 style={{ fontWeight: "bold", margin: "15px 0" }}>
+                  <strong>Most popular products</strong>
+                </h2>
                 <Row gutter={16}>
                   {this.list.map(item => (
                     <Col md={6} sm={12}>
-                      <SimpleCard item={item}/>
-                      </Col>
+                      <SimpleCard item={item} />
+                    </Col>
                   ))}
                 </Row>
               </Col>
               <br />
               <Col span={24}>
-                <h2 style={{ fontWeight: "bold", margin:"15px 0"}}><strong>All listings</strong></h2>
+                <h2 style={{ fontWeight: "bold", margin: "15px 0" }}>
+                  <strong>All listings</strong>
+                </h2>
                 <SuggestedCardList relatedList={this.list} />
               </Col>
             </div>

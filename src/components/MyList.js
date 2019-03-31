@@ -20,7 +20,7 @@ class MyListingProducts extends Component {
     this.setState({ value: e });
   }
   returnItem(item) {
-    return <DetailsCard item={item} />;
+    return <DetailsCard buttonText="View" item={item} />;
   }
   renderItem(item) {
     if (item.nature === this.state.value) {

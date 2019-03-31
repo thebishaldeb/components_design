@@ -44,7 +44,7 @@ class MyListings extends Component {
           <Breadcrumb.Item href=""> My listing</Breadcrumb.Item>
         </Breadcrumb>
         <Layout style={{ padding: "24px 0", background: "#fff" }}>
-          <Row>
+          <Row style={{padding:"0 5%"}}>
             <Col lg={7} md={24} >
               <AccDetailsMenu select={3}/>
             </Col>
