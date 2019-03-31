@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Layout, Row, Col } from "antd";
+import { Layout, Row, Col, Breadcrumb } from "antd";
 import MyList from "./components/MyList";
 import AccDetailsMenu from "./components/AccDetailsMenu";
 
@@ -37,17 +37,20 @@ class MyListings extends Component {
     ]
   };
   render() {
-    return( 
+    return (
       <div style={{ padding: "20px" }}>
-        <h4 style={{ padding: "10px 20px" }}>Account > My listing</h4>
+        <Breadcrumb separator=">">
+          <Breadcrumb.Item>Account</Breadcrumb.Item>
+          <Breadcrumb.Item href=""> My listing</Breadcrumb.Item>
+        </Breadcrumb>
         <Layout style={{ padding: "24px 0", background: "#fff" }}>
           <Row>
             <Col lg={7} md={24}>
               <AccDetailsMenu />
             </Col>
             <Col lg={15} md={24}>
-             <MyList products={this.state.products}/>
-             </Col>
+              <MyList products={this.state.products} />
+            </Col>
           </Row>
         </Layout>
       </div>

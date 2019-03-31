@@ -49,3 +49,6 @@
   border: #23b195 0.5px solid !important;
   width: 33%;
 }
+.filterButtons {
+  margin: 0 5px !important;
+}

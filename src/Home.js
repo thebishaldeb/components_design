@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Row, Col } from "antd";
+import { Row, Col, Breadcrumb } from "antd";
 import Card from "./ui-antd/components/Card";
 import UserCard from "./components/userCard";
 import ProductCard from "./components/ProductCard";
@@ -118,7 +118,15 @@ class App extends Component {
     return (
       <div>
         <div style={{ padding: "10px 20px" }}>
-          Home > DSLR cameras > Popular Products > Canon EOS 70D (Rajeev Khanna)
+          <Breadcrumb separator=">">
+            <Breadcrumb.Item>Home</Breadcrumb.Item>
+            <Breadcrumb.Item href=""> DSLR cameras</Breadcrumb.Item>
+            <Breadcrumb.Item href=""> Popular Products</Breadcrumb.Item>
+            <Breadcrumb.Item href="">
+              {" "}
+              Canon EOS 70D (Rajeev Khanna)
+            </Breadcrumb.Item>
+          </Breadcrumb>
         </div>
         <h1
           style={{
