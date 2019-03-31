@@ -1,8 +1,7 @@
 import React from "react";
 import "../App.css";
-import { Row, Col, Button, Switch, List, Icon, Card } from "antd";
+import { Row, Col, Card } from "antd";
 
-const { Meta } = Card;
 class FilterCards extends React.Component {
   render() {
     return (

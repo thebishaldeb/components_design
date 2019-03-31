@@ -3,10 +3,11 @@ import "./App.css";
 import { Layout, Row, Col, Breadcrumb } from "antd";
 import MyList from "./components/MyList";
 import AccDetailsMenu from "./components/AccDetailsMenu";
+import DetailsCard from "./components/DetailsCard";
 
-class MyListings extends Component {
+class MyListDetails extends Component {
   state = {
-    products: [
+    product:
       {
         name: "Blah blah bleh",
         rent: 1200,
@@ -15,26 +16,7 @@ class MyListings extends Component {
         rating: 4,
         reviews: 7,
         nature: "On Rent"
-      },
-      {
-        name: "Blah lah bleh",
-        rent: 120,
-        image:
-          "https://free4kwallpapers.com/uploads/wallpaper-cache/naruto-shippuden-1920x1080-1024x768-MM-100.jpg",
-        rating: 3.7,
-        reviews: 12,
-        nature: "On Shelf"
-      },
-      {
-        name: "Blah lah bleh",
-        rent: 120,
-        image:
-          "https://free4kwallpapers.com/uploads/wallpaper-cache/naruto-kyuubi-mode-3-1024x768-MM-100.jpg",
-        rating: 3.9,
-        reviews: 25,
-        nature: "On Rent"
       }
-    ]
   };
   render() {
     return (
@@ -46,10 +28,10 @@ class MyListings extends Component {
         <Layout style={{ padding: "24px 0", background: "#fff" }}>
           <Row>
             <Col lg={7} md={24} >
-              <AccDetailsMenu select={3}/>
+              <AccDetailsMenu select={3} />
             </Col>
-            <Col lg={15} md={24}>
-              <MyList products={this.state.products} />
+            <Col lg={13} md={24}>
+              <DetailsCard item={this.state.product} />
             </Col>
           </Row>
         </Layout>
@@ -58,4 +40,4 @@ class MyListings extends Component {
   }
 }
 
-export default MyListings;
+export default MyListDetails;

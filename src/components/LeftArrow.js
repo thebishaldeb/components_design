@@ -2,7 +2,7 @@ import React from 'react';
 import "../App.css";
 import { Icon } from "antd";
 
-const RightArrow = (props) => {
+const LeftArrow = (props) => {
   return (
     <div className="nextArrow" onClick={props.goToPrevSlide}>
       <Icon type="left-circle" />
@@ -10,4 +10,4 @@ const RightArrow = (props) => {
   );
 }
 
-export default RightArrow;
+export default LeftArrow;

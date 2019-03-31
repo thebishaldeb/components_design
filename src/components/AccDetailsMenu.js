@@ -7,9 +7,10 @@ const { Sider } = Layout;
 
 class AccDetailsMenu extends Component {
   render() {
-    return (
+    return (<div style={{
+      minWidth:"100%", overflow:"hidden"}}>
       <Sider
-        width={"100%"}
+        width={600}
         style={{ background: "#fff", marginL: "10px 30px 0 0", padding:"40px"}}
       >
         <h4 style={{ padding: "0 20px" }}>
@@ -17,7 +18,7 @@ class AccDetailsMenu extends Component {
         </h4>
         <Menu
           mode="inline"
-          defaultSelectedKeys={["3"]}
+          defaultSelectedKeys={[`${this.props.select}`]}
           defaultOpenKeys={["sub1"]}
           style={{ height: "100%" }}
           className="AccountDetails"
@@ -36,7 +37,7 @@ class AccDetailsMenu extends Component {
             <Icon type="heart" /> Watchist
           </Item>
         </Menu>
-      </Sider>
+      </Sider></div>
     );
   }
 }
