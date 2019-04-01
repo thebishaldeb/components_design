@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../App.css";
-import { Layout, Icon, Button, Row, Col } from "antd";
+import { Layout, Button, Row, Col } from "antd";
 import DetailsCard from "./DetailsCard";
 const ButtonGroup = Button.Group;
 const { Content } = Layout;

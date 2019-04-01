@@ -10,8 +10,8 @@ class AccDetailsMenu extends Component {
     return (<div style={{
       minWidth:"100%", overflow:"hidden"}}>
       <Sider
-        width={600}
-        style={{ background: "#fff", marginL: "10px 30px 0 0", padding:"40px"}}
+        width={550}
+        style={{ background: "#fff",padding:"40px 0"}}
       >
         <h4 style={{ padding: "0 20px" }}>
           <strong>Account Details</strong>

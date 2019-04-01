@@ -1,12 +1,17 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Row, Col, Breadcrumb, Layout } from "antd";
+import { Row, Col, Breadcrumb } from "antd";
 import Card from "./ui-antd/components/Card";
 import UserCard from "./components/userCard";
 import ProductCard from "./components/ProductCard";
 import ReviewsCard from "./components/ReviewsCard";
 import AddToCartCard from "./components/AddToCartCard";
 import SuggestedCardList from "./components/SuggestedCardList";
+
+import naruto from "./resources/naruto.jpg";
+import naruto2 from "./resources/naruto2.jpg";
+import naruto3 from "./resources/naruto3.jpg";
+import naruto4 from "./resources/naruto4.jpg";
 
 class App extends Component {
   state = {
@@ -15,10 +20,7 @@ class App extends Component {
       replacementValue: 70000,
       Specification: ["Blah Blah Blah", "Bleh", "Same stuffs"],
       images: [
-        "https://free4kwallpapers.com/uploads/wallpaper-cache/naruto-anime-4k-wallpaper-1024x768-MM-100.jpg",
-        "https://free4kwallpapers.com/uploads/wallpaper-cache/naruto-vsmadara-uchiha-wallpaper-1024x768-MM-100.jpg",
-        "https://free4kwallpapers.com/uploads/wallpaper-cache/naruto-kyuubi-mode-3-1024x768-MM-100.jpg",
-        "https://free4kwallpapers.com/uploads/wallpaper-cache/naruto-shippuden-1920x1080-1024x768-MM-100.jpg"
+        naruto, naruto2, naruto3, naruto4
       ],
       description:
         "The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout. A practice not without controversy, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content. The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software. Today it's seen all around the web; on templates, websites, and stock designs. Use our generator to get",

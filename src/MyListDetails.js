@@ -1,17 +1,18 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Layout, Row, Col, Breadcrumb, Calendar, Card, Icon } from "antd";
+import { Layout, Row, Col, Breadcrumb, Card } from "antd";
 import AccDetailsMenu from "./components/AccDetailsMenu";
-import Avatar from "./ui-antd/components/Avatar";
 import DetailsCard from "./components/DetailsCard";
+import ProductCalender from "./components/ProductCalender";
 import ReviewsCard from "./components/ReviewsCard";
+import naruto4 from "./resources/naruto4.jpg";
+
 class MyListDetails extends Component {
   state = {
     product: {
       name: "Blah blah bleh",
       rent: 1200,
-      image:
-        "https://free4kwallpapers.com/uploads/wallpaper-cache/naruto-anime-4k-wallpaper-1024x768-MM-100.jpg",
+      image: naruto4,
       rating: 4,
       reviews: 7,
       nature: "On Rent"
@@ -42,20 +43,28 @@ class MyListDetails extends Component {
     bookings: [
       {
         name: "Rajeev Khanna",
-        rating: 4
+        rating: 4,
+        start: "2019-03-01",
+        end: "2019-03-12"
       },
       {
         name: "BIshal Deb",
-        rating: 3.7
+        rating: 3.7,
+        start: "2019-03-25",
+        end: "2019-03-31"
       },
       {
         name: "Mukesh Babu",
-        rating: 2.2
+        rating: 2.2,
+        start: "2019-03-15",
+        end: "2019-03-16"
       },
       {
         name: "Rajeev Khanna",
-        rating: 4
-      },
+        rating: 4,
+        start: "2019-03-20",
+        end: "2019-03-22"
+      }
     ]
   };
   render() {
@@ -71,54 +80,9 @@ class MyListDetails extends Component {
               <AccDetailsMenu select={3} />
             </Col>
             <Col lg={15} md={24}>
-                <DetailsCard buttonText="Edit" item={this.state.product} />
+              <DetailsCard buttonText="Edit" item={this.state.product} />
               <Card>
-                <Row>
-                  <h3>Product Calender</h3>
-                  <br />
-                  <Col sm={13} style={{paddingRight: "15px",borderRight:"1px #eee solid"}}>
-                    <Calendar fullscreen={false}/>
-                  </Col>
-                  <Col sm={11}  style={{paddingLeft: "15px"}}>
-                    <h3 style={{ fontWeight:600, paddingBottom: 0}}>Bookings</h3>
-                    <Card style={{ border: 0, padding: "2px !important" }}>
-                      {this.state.bookings.map(item => (
-                        <div>
-                          <div>
-                            <Avatar />
-                            <h4
-                              style={{
-                                marginLeft: "10px",
-                                display: "inline-block"
-                              }}
-                            >
-                              {item.name}
-                            </h4>
-                          </div>
-                          <Col span={24} style={{ paddingBottom:"5px", borderBottom:"1px #eee solid",marginBottom:"15px"}}>
-                            <h5 style={{ margin: "10px 3px" }}>
-                              <span
-                                style={{
-                                  background: "#23b195",
-                                  color: "white",
-                                  padding: "0px 6px 1px 7px"
-                                }}
-                              >
-                                {item.rating}{" "}
-                                <Icon type="star" theme="filled" />
-                              </span>
-                              <span
-                                style={{ color: "#23b195", padding: "0 14px" }}
-                              >
-                                Cancel Booking
-                              </span>
-                            </h5>
-                          </Col>
-                        </div>
-                      ))}
-                    </Card>
-                  </Col>
-                </Row>
+                <ProductCalender bookings={this.state.bookings} />
               </Card>
               <ReviewsCard reviews={this.state.reviews} />
             </Col>

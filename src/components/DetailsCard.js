@@ -20,6 +20,7 @@ class DetailsCard extends Component {
                 width: "100%",
                 paddingRight: "20px"
               }}
+              alt=""
               src={this.props.item.image}
             />
           </div>

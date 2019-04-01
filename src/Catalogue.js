@@ -7,6 +7,12 @@ import LeftArrow from "./components/LeftArrow";
 import FilterCards from "./components/FilterCards";
 import SuggestedCardList from "./components/SuggestedCardList";
 import SimpleCard from "./components/SimpleCard";
+
+import naruto from "./resources/naruto.jpg";
+import naruto2 from "./resources/naruto2.jpg";
+import naruto3 from "./resources/naruto3.jpg";
+import naruto4 from "./resources/naruto4.jpg";
+
 class Catalogue extends Component {
   state = {
     productlist: [
@@ -14,27 +20,24 @@ class Catalogue extends Component {
         name: "Blah blah bleh",
         rent: 1200,
         seller: "Rajeev Khanna",
-        image:
-          "https://free4kwallpapers.com/uploads/wallpaper-cache/naruto-anime-4k-wallpaper-1024x768-MM-100.jpg",
+        image: naruto,
         rating: 4
       },
       {
         name: "Blah lah bleh",
         rent: 120,
         seller: "Ravi Khan",
-        image:
-          "https://free4kwallpapers.com/uploads/wallpaper-cache/naruto-shippuden-1920x1080-1024x768-MM-100.jpg",
+        image: naruto2,
         rating: 3.7
       },
       {
         name: "Blah lah bleh",
         rent: 120,
         seller: "Ravi",
-        image:
-          "https://free4kwallpapers.com/uploads/wallpaper-cache/naruto-kyuubi-mode-3-1024x768-MM-100.jpg",
+        image: naruto3,
         rating: 3.9
       }
-    ],
+    ]
   };
 
   list = [
@@ -49,7 +52,7 @@ class Catalogue extends Component {
         <div style={{ padding: "0 20px" }} />
         <div className="container">
           <Row>
-            <div style={{ padding: "0 10%", overflow: "hidden" }}>
+            <div style={{ padding: "5px 10%", overflow: "hidden" }}>
               <Col lg={20} md={24} style={{ paddingBottom: "10px" }}>
                 <Button className="filterButtons">Category</Button>
                 <Button className="filterButtons">Brand</Button>

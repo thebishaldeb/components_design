@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import { Row, Col, Card } from "antd";
+import { Row, Col } from "antd";
 
 class FilterCards extends React.Component {
   render() {
