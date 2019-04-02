@@ -28,7 +28,7 @@
 }
 .ant-button.checked {
   background: #23b195 !important;
-  color: #fff;
+  color: #ffffff;
 }
 
 .btn {
@@ -46,4 +46,17 @@
 }
 .filterButtons {
   margin: 0 5px !important;
+}
+
+.ActiveCond, .NotActive:hover {
+  cursor: pointer;
+  background-color: rgba(35, 177, 149,0.2) !important;
+  font-size: 12px;
+  padding: 10%;
+}
+
+.NotActive {
+  font-size: 12px;
+  padding: 10%;
+  border: 0.5px solid rgba(35, 177, 149,0.2)
 }

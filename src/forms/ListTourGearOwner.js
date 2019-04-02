@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../App.css";
-import { Layout, Row, Col, Form, Input, Button, Radio } from "antd";
+import { Row, Col, Form, Input, Button } from "antd";
 import ListYGSteps from "../components/ListYGSteps";
 import TextArea from "antd/lib/input/TextArea";
 
@@ -8,7 +8,7 @@ class ListTourGearOwner extends Component {
   render() {
     return (
       <div style={{ padding: "20px" }}>
-        <Row align="middle">
+        <Row>
           <Col
             md={{ span: 14, offset: 5 }}
             sm={{ span: 20, offset: 2 }}
@@ -68,7 +68,7 @@ class ListTourGearOwner extends Component {
                     float: "right"
                   }}
                 >
-                  Submit
+                  SUBMIT
                 </Button>
               </Form.Item>
             </Form>
