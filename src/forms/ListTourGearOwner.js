@@ -5,20 +5,13 @@ import ListYGSteps from "../components/ListYGSteps";
 import TextArea from "antd/lib/input/TextArea";
 
 class ListTourGearOwner extends Component {
-  constructor() {
-    super();
-    this.state = {
-      formLayout: "vertical"
-    };
-  }
-
   render() {
     return (
       <div style={{ padding: "20px" }}>
         <Row align="middle">
           <Col
             md={{ span: 14, offset: 5 }}
-            sm={{ span: 20, offset: 3 }}
+            sm={{ span: 20, offset: 2 }}
             style={{
               padding: "24px auto",
               background: "#fff"
