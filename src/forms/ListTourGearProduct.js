@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../App.css";
-import { Row, Col, Form, Input, Button, Checkbox } from "antd";
+import { Row, Col, Form, Input, Button, Checkbox, Icon } from "antd";
 import ListYGSteps from "../components/ListYGSteps";
 import TextArea from "antd/lib/input/TextArea";
 class ListTourGearProduct extends Component {
@@ -15,8 +15,57 @@ class ListTourGearProduct extends Component {
       "Hinata",
       "Shikamaru",
       "Choji"
-    ]
+    ],
+    category: [
+      {
+        icon: "camera",
+        name: "Camera"
+      },
+      {
+        icon: "printer",
+        name: "DSLR"
+      },
+      {
+        icon: "filter",
+        name: "Lens"
+      },
+      {
+        icon: "video-camera",
+        name: "Video Camera"
+      },
+      {
+        icon: "rocket",
+        name: "Drone and arial"
+      },
+      {
+        icon: "cluster",
+        name: "Tripod and Support"
+      },
+      {
+        icon: "bulb",
+        name: "Lighting"
+      },
+      {
+        icon: "sound",
+        name: "Audio and recording"
+      },
+      {
+        icon: "radar-chart",
+        name: "Others"
+      }
+    ],
+    value: ""
   };
+  classNamesgroup(e) {
+    if (this.state.value === e) {
+      return "ActiveCond";
+    } else {
+      return "NotActive";
+    }
+  }
+  renderCategory(e) {
+    this.setState({ value: e });
+  }
   render() {
     return (
       <div style={{ padding: "20px" }}>
@@ -41,13 +90,32 @@ class ListTourGearProduct extends Component {
                 <p style={{ fontSize: "10px" }}>Select your offering</p>
                 <Checkbox.Group style={{ width: "100%" }}>
                   <Row gutter={16}>
-                  {this.state.package.map(item => (
-                    <Col span={12}>
-                      <Checkbox value={item}>{item}</Checkbox>
-                    </Col>
-                  ))}
+                    {this.state.package.map(item => (
+                      <Col span={12}>
+                        <Checkbox value={item}>{item}</Checkbox>
+                      </Col>
+                    ))}
                   </Row>
                 </Checkbox.Group>
+              </Form.Item>
+              <Form.Item label={<strong>Gear category</strong>}>
+                <p style={{ fontSize: "10px" }}>
+                  Select the closest category your gear belongs to
+                </p>
+                <Row gutter={16}>
+                  {this.state.category.map(item => (
+                    <Col md={6} xs={8} style={{textAlign:"center"}}>
+                      <div
+                        onClick={e => this.renderCategory(item.name)}
+                        className={this.classNamesgroup(item.name)}
+                        style={{padding: "50px", height:"200px" }}
+                      >
+                      <div style={{fontSize:"50px"}}><Icon type={item.icon} /></div>
+                        <h5>{item.name}</h5>
+                      </div>
+                    </Col>
+                  ))}
+                </Row>
               </Form.Item>
               <Row gutter={16}>
                 <Col span={12}>

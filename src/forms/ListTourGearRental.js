@@ -103,6 +103,7 @@ class ListTourGearRental extends Component {
                     <div
                       onClick={e => this.renderCondition("excellent")}
                       className={this.classNamesgroup("excellent")}
+                      style={{ fontSize: "12px", padding: "10%" }}
                     >
                       <h3> Excellent</h3>
                       <ul style={{ paddingLeft: "22px" }}>
@@ -118,6 +119,7 @@ class ListTourGearRental extends Component {
                     <div
                       onClick={e => this.renderCondition("good")}
                       className={this.classNamesgroup("good")}
+                      style={{ fontSize: "12px", padding: "10%" }}
                     >
                       <h3> Good</h3>
                       <ul style={{ paddingLeft: "22px" }}>
@@ -133,6 +135,7 @@ class ListTourGearRental extends Component {
                     <div
                       onClick={e => this.renderCondition("fairly used")}
                       className={this.classNamesgroup("fairly used")}
+                      style={{ fontSize: "12px", padding: "10%" }}
                     >
                       <h3> Fairly used</h3>
                       <ul style={{ paddingLeft: "22px" }}>
@@ -154,7 +157,7 @@ class ListTourGearRental extends Component {
                     fontSize: "10px",
                     marginLeft: "20px",
                     float: "right",
-                    width:"28%"
+                    width: "28%"
                   }}
                 >
                   UPLOAD
@@ -164,7 +167,7 @@ class ListTourGearRental extends Component {
                     border: "0.5px #23b195 solid",
                     fontSize: "10px",
                     float: "right",
-                    width:"28%"
+                    width: "28%"
                   }}
                 >
                   SAVE AS DRAFT
