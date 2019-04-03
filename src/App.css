@@ -48,11 +48,22 @@
   margin: 0 5px !important;
 }
 
-.ActiveCond, .NotActive:hover {
+.ActiveCond,
+.NotActive:hover {
   cursor: pointer;
-  background-color: rgba(35, 177, 149,0.2) !important;
+  background-color: rgba(35, 177, 149, 0.2) !important;
 }
 
 .NotActive {
-  border: 0.5px solid rgba(35, 177, 149,0.2)
+  border: 0.5px solid rgba(35, 177, 149, 0.2);
+}
+
+.ant-upload-select-picture-card i {
+  font-size: 32px;
+  color: #999;
+}
+
+.ant-upload-select-picture-card .ant-upload-text {
+  margin-top: 8px;
+  color: #666;
 }

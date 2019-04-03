@@ -1,6 +1,16 @@
 import React, { Component } from "react";
 import "../App.css";
-import { Row, Col, Form, Input, Button, Checkbox, Icon } from "antd";
+import {
+  Row,
+  Col,
+  Form,
+  Input,
+  Button,
+  Checkbox,
+  Upload,
+  Icon,
+  Modal
+} from "antd";
 import ListYGSteps from "../components/ListYGSteps";
 import TextArea from "antd/lib/input/TextArea";
 class ListTourGearProduct extends Component {
@@ -54,7 +64,10 @@ class ListTourGearProduct extends Component {
         name: "Others"
       }
     ],
-    value: ""
+    value: "",
+    previewVisible: false,
+    previewImage: "",
+    fileList: []
   };
   classNamesgroup(e) {
     if (this.state.value === e) {
@@ -66,7 +79,27 @@ class ListTourGearProduct extends Component {
   renderCategory(e) {
     this.setState({ value: e });
   }
+  handleCancel = () => this.setState({ previewVisible: false });
+
+  handlePreview = file => {
+    this.setState({
+      previewImage: file.url || file.thumbUrl,
+      previewVisible: true
+    });
+  };
+
+  handleChange = ({ fileList }) => this.setState({ fileList });
+
   render() {
+    const { previewVisible, previewImage, fileList } = this.state;
+    const uploadButton = (
+      <div>
+        <Icon type="plus" />
+        <div style={{ textAlign: "center" }} className="ant-upload-text">
+          Upload
+        </div>
+      </div>
+    );
     return (
       <div style={{ padding: "20px" }}>
         <Row>
@@ -104,20 +137,43 @@ class ListTourGearProduct extends Component {
                 </p>
                 <Row gutter={16}>
                   {this.state.category.map(item => (
-                    <Col md={6} xs={8} style={{textAlign:"center"}}>
+                    <Col md={6} xs={8} style={{ textAlign: "center" }}>
                       <div
                         onClick={e => this.renderCategory(item.name)}
                         className={this.classNamesgroup(item.name)}
-                        style={{padding: "50px", height:"200px" }}
+                        style={{ padding: "50px", height: "200px" }}
                       >
-                      <div style={{fontSize:"50px"}}><Icon type={item.icon} /></div>
+                        <div style={{ fontSize: "50px" }}>
+                          <Icon type={item.icon} />
+                        </div>
                         <h5>{item.name}</h5>
                       </div>
                     </Col>
                   ))}
                 </Row>
               </Form.Item>
-              <Row gutter={16}>
+              <Form.Item label={<strong>Upload Images</strong>}>
+                <p style={{ fontSize: "10px" }}>
+                  Upload upto 4 images in jpj, jpeg, png format.
+                </p>
+                <Upload
+                  action="//jsonplaceholder.typicode.com/posts/"
+                  listType="picture-card"
+                  fileList={fileList}
+                  onPreview={this.handlePreview}
+                  onChange={this.handleChange}
+                >
+                  {fileList.length >= 4 ? null : uploadButton}
+                </Upload>
+                <Modal
+                  visible={previewVisible}
+                  footer={null}
+                  onCancel={this.handleCancel}
+                >
+                  <img alt="" style={{ width: "100%" }} src={previewImage} />
+                </Modal>
+              </Form.Item>
+              <Row gutter={32}>
                 <Col span={12}>
                   <Form.Item label={<strong>Serial Number</strong>}>
                     <Input />
