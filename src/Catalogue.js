@@ -11,7 +11,6 @@ import SimpleCard from "./components/SimpleCard";
 import naruto from "./resources/naruto.jpg";
 import naruto2 from "./resources/naruto2.jpg";
 import naruto3 from "./resources/naruto3.jpg";
-import naruto4 from "./resources/naruto4.jpg";
 
 class Catalogue extends Component {
   state = {

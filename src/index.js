@@ -9,12 +9,14 @@ import MyListDetails from './MyListDetails';
 import ListTourGearOwner from './forms/ListTourGearOwner';
 import ListTourGearProduct from './forms/ListTourGearProduct';
 import ListTourGearRental from './forms/ListTourGearRental';
+import SignInCard from './forms/SignInCard';
 
 ReactDOM.render(<BrowserRouter>
     <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/my-listings" exact component={MyListings} />
         <Route path="/catalogue" exact component={Catalogue} />
+        <Route path="/authentication" exact component={SignInCard} />
         <Route path="/my-list-details" exact component={MyListDetails} />
         <Route path="/list-your-gear" exact component={ListTourGearOwner} />
         <Route path="/list-your-gear2" exact component={ListTourGearProduct} />

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "../App.css";
 import { Row, Col, Carousel } from "antd";
 import Card from "../ui-antd/components/Card";
@@ -26,12 +27,12 @@ class ProductCard extends Component {
             </span>
           </Col>
           <Col span={12}>
-            <a
-              href="#"
+            <Link
+              to=""
               style={{ float: "right", color: "#23b195", fontSize: "14px" }}
             >
               COMPARE PRODUCT
-            </a>
+            </Link>
           </Col>
         </Row>
         <br />

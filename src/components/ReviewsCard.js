@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../App.css";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Rate, List, Row, Col } from "antd";
 import Card from "../ui-antd/components/Card";
 import Avatar from "../ui-antd/components/Avatar";
@@ -73,9 +73,13 @@ class ReviewsCard extends Component {
                       fontSize: "14px"
                     }}
                   >
-                    <a style={{ color: " #000", fontWeight: 500 }} href="#">
+                    <Link
+                      to=""
+                      style={{ color: " #000", fontWeight: 500 }}
+                      href="#"
+                    >
                       {item.name}
-                    </a>
+                    </Link>
                     <h5>{item.Date}</h5>
                   </div>
                 }
@@ -86,9 +90,9 @@ class ReviewsCard extends Component {
             </List.Item>
           )}
         />
-        {/* <Link to=""> */}
+        <Link to="">
           <h3 style={{ color: "#23b195" }}>Show all reviews</h3>
-        {/* </Link> */}
+        </Link>
       </Card>
     );
   }

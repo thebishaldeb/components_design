@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../App.css";
-import { Row, Col, Form, Input, Button, Checkbox, Radio, div } from "antd";
+import { Row, Col, Form, Input, Button, Checkbox } from "antd";
 import ListYGSteps from "../components/ListYGSteps";
 
 class ListTourGearRental extends Component {
