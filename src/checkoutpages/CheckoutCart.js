@@ -1,11 +1,11 @@
 import React from "react";
 import "../App.css";
 import { Link } from "react-router-dom";
-import { Row, Col, Button, Steps, Card, Icon } from "antd";
+import { Row, Col, Button, Card, Icon } from "antd";
+import CheckoutSteps from "../components/CheckoutSteps";
 import naruto2 from "../resources/naruto2.jpg";
-const Step = Steps.Step;
 
-export default class Cart extends React.Component {
+export default class CheckoutCart extends React.Component {
   state = {
     products: {
       name: "Just a random name to fill the space",
@@ -91,28 +91,7 @@ export default class Cart extends React.Component {
     return (
       <div style={{ padding: "20px 8%" }}>
         <Row>
-          <Col md={{ span: 14, offset: 5 }} sm={{ span: 22, offset: 1 }}>
-            <div style={{textAlign:"center", textShadow:"1px 0 0", fontSize:"30px", marginBottom:"19px"}}>Checkout</div>
-            <Steps
-              style={{ width: "100%", padding: "1% 0 50px 0" }}
-              current={0}
-            >
-              <Step title={<span style={{ fontSize: "13px" }}>Cart</span>} />
-              <Step
-                title={
-                  <span style={{ fontSize: "13px" }}>Billing Address</span>
-                }
-              />
-              <Step
-                title={
-                  <span style={{ fontSize: "13px" }}>Payment options</span>
-                }
-              />
-              <Step
-                title={<span style={{ fontSize: "13px" }}>Order Status</span>}
-              />
-            </Steps>
-          </Col>
+          <CheckoutSteps step={0}/>
           <Col span={12}>
             <div style={{ fontSize: "14px" }}>
               <strong>My cart - </strong>1 items
@@ -158,8 +137,12 @@ export default class Cart extends React.Component {
 class CartItem extends React.Component {
   render() {
     return (
-      <Row style={{borderRadius: "9px",
-        boxShadow: "0 0 10px 4px rgba(49, 196, 167, 0.09)",}}>
+      <Row
+        style={{
+          borderRadius: "9px",
+          boxShadow: "0 0 10px 4px rgba(49, 196, 167, 0.09)"
+        }}
+      >
         <Col span={8}>
           <img
             style={{ width: "100%", height: 160 }}

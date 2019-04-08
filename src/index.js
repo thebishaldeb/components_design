@@ -13,7 +13,7 @@ import SignInCard from "./forms/SignInCard";
 import CheckoutCart from "./checkoutpages/CheckoutCart";
 // import CheckoutBill from "./checkoutpages/CheckoutBill";
 // import CheckoutPay from "./checkoutpages/CheckoutPay";
-// import CheckoutOrder from "./checkoutpages/CheckoutOrder";
+import CheckoutOrder from "./checkoutpages/CheckoutOrder";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -29,7 +29,7 @@ ReactDOM.render(
       <Route path="/checkout-cart" exact component={CheckoutCart} />
       {/* <Route path="/checkout-bill" exact component={CheckoutBill} /> */}
       {/* <Route path="/checkout-pay" exact component={CheckoutPay} /> */}
-      {/* <Route path="/checkout-order" exact component={CheckoutOrder} /> */}
+      <Route path="/checkout-order" exact component={CheckoutOrder} />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
