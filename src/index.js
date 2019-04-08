@@ -12,7 +12,7 @@ import ListTourGearRental from "./forms/ListTourGearRental";
 import SignInCard from "./forms/SignInCard";
 import CheckoutCart from "./checkoutpages/CheckoutCart";
 // import CheckoutBill from "./checkoutpages/CheckoutBill";
-// import CheckoutPay from "./checkoutpages/CheckoutPay";
+import CheckoutPay from "./checkoutpages/CheckoutPay";
 import CheckoutOrder from "./checkoutpages/CheckoutOrder";
 
 ReactDOM.render(
@@ -28,7 +28,7 @@ ReactDOM.render(
       <Route path="/list-your-gear3" exact component={ListTourGearRental} />
       <Route path="/checkout-cart" exact component={CheckoutCart} />
       {/* <Route path="/checkout-bill" exact component={CheckoutBill} /> */}
-      {/* <Route path="/checkout-pay" exact component={CheckoutPay} /> */}
+      <Route path="/checkout-pay" exact component={CheckoutPay} />
       <Route path="/checkout-order" exact component={CheckoutOrder} />
     </Switch>
   </BrowserRouter>,

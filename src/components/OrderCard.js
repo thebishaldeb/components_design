@@ -71,28 +71,44 @@ export default class OrderCard extends React.Component {
         <h3 style={{ fontSize: "17px", textShadow: "0.3px 0 0" }}>
           Cart Summary
         </h3>
+        {this.props.paid === true ? (
+          <h5
+            style={{
+              fontSize: "11px",
+              color: "#4a4a4a",
+              letterSpacing: "1px"
+            }}
+          >
+            Total rent amount{" "}
+            <strong style={{ float: "right" }}>
+              &#8377;
+              {this.props.product.totalRent}
+            </strong>
+          </h5>
+        ) : (
+          <h4
+            style={{
+              fontSize: "15px",
+              textShadow: "0.5px 0 0",
+              lineHeight: "15px"
+            }}
+          >
+            Total rent amount{" "}
+            <strong style={{ float: "right", color: "#23b195" }}>
+              &#8377;
+              {this.props.product.totalRent}
+            </strong>
+          </h4>
+        )}
         <h5
           style={{
             fontSize: "11px",
             color: "#4a4a4a",
-            letterSpacing: "1px"
-          }}
-        >
-          Total rent amount{" "}
-          <strong style={{ float: "right" }}>
-            &#8377;
-            {this.props.product.totalRent}
-          </strong>
-        </h5>
-        <h5
-          style={{
-            fontSize: "11px",
-            color: "#4a4a4a",
-            letterSpacing: "1px"
+            letterSpacing: "0.5px"
           }}
         >
           Refundable deposit{" "}
-          <strong style={{ float: "right" }}>
+          <strong style={{ float: "right", letterSpacing: "1px" }}>
             &#8377; {this.props.product.refund}
           </strong>
         </h5>
