@@ -13,6 +13,7 @@ import {
 } from "antd";
 import ListYGSteps from "../components/ListYGSteps";
 import TextArea from "antd/lib/input/TextArea";
+
 class ListTourGearProduct extends Component {
   state = {
     package: [
@@ -106,7 +107,7 @@ class ListTourGearProduct extends Component {
           <Col
             md={{ span: 14, offset: 5 }}
             sm={{ span: 20, offset: 2 }}
-            style={{ padding: "24px auto", background: "#fff" }}
+            style={{ padding: "24px auto" }}
           >
             <ListYGSteps step={1} />
             <Form layout="vertical">
@@ -190,12 +191,7 @@ class ListTourGearProduct extends Component {
               </Form.Item>
               <Form.Item>
                 <Button
-                  style={{
-                    background: "#23b195",
-                    color: "white",
-                    padding: "0 10%",
-                    float: "right"
-                  }}
+                  className="listSubmitButton"
                 >
                   Next
                 </Button>

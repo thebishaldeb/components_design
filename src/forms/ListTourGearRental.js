@@ -25,8 +25,7 @@ class ListTourGearRental extends Component {
             md={{ span: 14, offset: 5 }}
             sm={{ span: 20, offset: 2 }}
             style={{
-              padding: "24px auto",
-              background: "#fff"
+              padding: "24px auto"
             }}
           >
             <ListYGSteps step={2} />
@@ -37,29 +36,13 @@ class ListTourGearRental extends Component {
                     <Input type="rext" value="300" />
                   </Col>
                   <Col span={4}>
-                    <span
-                      style={{
-                        color: "#5d5f5f",
-                        fontSize: "12px",
-                        lineHeight: "12px"
-                      }}
-                    >
-                      per day
-                    </span>
+                    <span className="perDayWeek">per day</span>
                   </Col>
                   <Col md={6} xs={8}>
                     <Input type="rext" value="300" />
                   </Col>
                   <Col span={4}>
-                    <span
-                      style={{
-                        color: "#5d5f5f",
-                        fontSize: "12px",
-                        lineHeight: "12px"
-                      }}
-                    >
-                      per week
-                    </span>
+                    <span className="perDayWeek">per week</span>
                   </Col>
                 </Row>
               </Form.Item>
@@ -69,7 +52,7 @@ class ListTourGearRental extends Component {
                     <Input type="rext" value="300" />
                   </Col>
                   <Col span={16}>
-                    <span style={{ color: "#5d5f5f", fontSize: "10px" }}>
+                    <span className="selectfit">
                       Note: Cost of Replacement in market value of the product,
                       incase of total damage or theft settlement will be upto
                       this amount.
@@ -90,11 +73,7 @@ class ListTourGearRental extends Component {
 
               <Form.Item label={<strong>Product condition</strong>}>
                 <p
-                  style={{
-                    color: "#5d5f5f",
-                    fontSize: "10px",
-                    lineHeight: "10px"
-                  }}
+                  className="selectfit"
                 >
                   Select the one your product best fits into.
                 </p>
@@ -150,28 +129,8 @@ class ListTourGearRental extends Component {
                 </Row>
               </Form.Item>
               <Form.Item>
-                <Button
-                  style={{
-                    background: "#23b195",
-                    color: "white",
-                    fontSize: "10px",
-                    marginLeft: "20px",
-                    float: "right",
-                    width: "28%"
-                  }}
-                >
-                  UPLOAD
-                </Button>
-                <Button
-                  style={{
-                    border: "0.5px #23b195 solid",
-                    fontSize: "10px",
-                    float: "right",
-                    width: "28%"
-                  }}
-                >
-                  SAVE AS DRAFT
-                </Button>
+                <Button className="themeColor uploadButton">UPLOAD</Button>
+                <Button className="DraftButton">SAVE AS DRAFT</Button>
               </Form.Item>
             </Form>
           </Col>

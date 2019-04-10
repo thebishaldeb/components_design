@@ -140,7 +140,8 @@
   cursor: pointer;
 }
 
-.addressIcons, .addressIcons:hover {
+.addressIcons,
+.addressIcons:hover {
   border: 0;
   color: #5d5f5f !important;
   overflow: hidden;
@@ -238,4 +239,45 @@
   width: 100%;
   padding-right: 15px;
   height: 60px;
+}
+
+/* List your gear form */
+
+.listSubmitButton {
+  background: #23b195;
+  color: white;
+  padding: 0 10%;
+  float: right;
+}
+
+.listSteps {
+  text-align: center;
+  font-weight: 600;
+  color: #777;
+}
+
+.DraftButton {
+  border: 0.5px #23b195 solid !important;
+  font-size: 10px;
+  float: right;
+  width: 28%;
+}
+
+.uploadButton {
+  font-size: 10px;
+  margin-left: 20px;
+  float: right;
+  width: 28%;
+}
+
+.selectfit {
+  color: #5d5f5f;
+  font-size: 10px;
+  line-height: 10px;
+}
+
+.perDayWeek {
+  color: #5d5f5f;
+  font-size: 12px;
+  line-height: 12px
 }

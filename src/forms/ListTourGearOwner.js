@@ -60,16 +60,7 @@ class ListTourGearOwner extends Component {
                 <Input />
               </Form.Item>
               <Form.Item>
-                <Button
-                  style={{
-                    background: "#23b195",
-                    color: "white",
-                    padding: "0 10%",
-                    float: "right"
-                  }}
-                >
-                  SUBMIT
-                </Button>
+                <Button className="listSubmitButton">SUBMIT</Button>
               </Form.Item>
             </Form>
           </Col>

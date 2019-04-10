@@ -8,7 +8,7 @@ class ListYGSteps extends Component {
   render() {
     return (
       <div>
-        <h1 style={{ textAlign: "center", fontWeight:600, color:"#777" }}>List your gear</h1>
+        <h1 className="listSteps">List your gear</h1>
         <br />
         <Steps current={this.props.step}>
           <Step title="Owner details" />
