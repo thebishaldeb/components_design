@@ -8,26 +8,12 @@ class SignIn extends Component {
   render() {
     return (
       <div>
-        <p
-          style={{
-            color: "#4a4a4a",
-            fontSize: "11px",
-            letterSpacing: "0.8px",
-            paddingBottom: "10px"
-          }}
-        >
-          Let me help you sign in
-        </p>
-        <Form
-          style={{
-            paddingBottom: 0,
-            marginBottom: 0
-          }}
-        >
+        <p className="signInForm">Let me help you sign in</p>
+        <Form className="paddingMarginBottom">
           <Form.Item>
             <Input type="email" placeholder="Email Address" />
           </Form.Item>
-          <Form.Item style={{ paddingBottom: 0, marginBottom: 0 }}>
+          <Form.Item className="paddingMarginBottom">
             <Input type="password" placeholder="Password" />
             <Link
               style={{
@@ -42,28 +28,18 @@ class SignIn extends Component {
             </Link>
             <Button
               style={{
-                background: "#23b195",
-                color: "white",
                 marginTop: "10px"
               }}
+              className="themeColor"
               block
             >
               Sign In
             </Button>
-            <p
-              style={{
-                color: "#4a4a4a",
-                fontSize: "11px",
-                textAlign: "center",
-                letterSpacing: "0.8px",
-                paddingBottom: 0,
-                marginBottom: 0
-              }}
-            >
+            <p className="belowFormtext">
               New to LensHood?{" "}
               <span
                 onClick={e => this.props.setModal1Visible("signup")}
-                style={{ color: "#23b195", cursor: "pointer" }}
+                className="colorCursor"
               >
                 Sign Up
               </span>
@@ -78,22 +54,8 @@ class SignUp extends Component {
   render() {
     return (
       <div>
-        <p
-          style={{
-            color: "#4a4a4a",
-            fontSize: "11px",
-            letterSpacing: "0.8px",
-            paddingBottom: "10px"
-          }}
-        >
-          Let me help you sign up
-        </p>
-        <Form
-          style={{
-            paddingBottom: 0,
-            marginBottom: 0
-          }}
-        >
+        <p className="signInForm">Let me help you sign up</p>
+        <Form className="paddingMarginBottom">
           <Form.Item>
             <Input type="text" placeholder="Your Name" />
           </Form.Item>
@@ -103,35 +65,15 @@ class SignUp extends Component {
           <Form.Item>
             <Input type="password" placeholder="Password" />
           </Form.Item>
-          <Form.Item
-            style={{
-              paddingBottom: 0,
-              marginBottom: 0
-            }}
-          >
-            <Button
-              style={{
-                background: "#23b195",
-                color: "white"
-              }}
-              block
-            >
+          <Form.Item className="paddingMarginBottom">
+            <Button className="themeColor" block>
               Sign Up
             </Button>
-            <p
-              style={{
-                color: "#4a4a4a",
-                fontSize: "11px",
-                textAlign: "center",
-                letterSpacing: "0.8px",
-                paddingBottom: 0,
-                marginBottom: 0
-              }}
-            >
+            <p className="belowFormtext">
               Already have an account?{" "}
               <span
                 onClick={e => this.props.setModal1Visible("signin")}
-                style={{ color: "#23b195", cursor: "pointer" }}
+                className="colorCursor"
               >
                 Sign In
               </span>
@@ -150,14 +92,15 @@ export default class SignInAndSignUpCard extends Component {
   setModal1Visible(val) {
     this.setState({ SignInState: val });
   }
-  
+
   render() {
     return (
       <div>
         <Row padding="0">
           <Col span={8}>
             <img
-              src={naruto2} alt=""
+              src={naruto2}
+              alt=""
               width={"100%"}
               style={
                 this.state.SignInState === "signin"

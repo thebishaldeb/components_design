@@ -68,3 +68,35 @@
   color: #666;
 }
 
+/* SIGN-IN PAGES */
+
+.signInForm {
+  color: #4a4a4a;
+  font-size: 11px;
+  letter-spacing: 0.8px;
+  padding-bottom: 10px;
+}
+
+.paddingMarginBottom {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.themeColor {
+  background: #23b195;
+  color: white;
+}
+
+.belowFormtext {
+  color: #4a4a4a;
+  font-size: 11px;
+  text-align: center;
+  letter-spacing: 0.8px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.colorCursor {
+  color: #23b195;
+  cursor: pointer;
+}
