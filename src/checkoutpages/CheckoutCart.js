@@ -49,7 +49,7 @@ export default class CheckoutCart extends React.Component {
           </p>
           <p>
             25% Multi day discount{" "}
-            <div style="colorFloat">
+            <div className="colorFloat">
               -&#8377;
               {0.25 * this.state.products.rent * this.state.products.days}
             </div>
@@ -57,7 +57,7 @@ export default class CheckoutCart extends React.Component {
           <br />
           <h3>
             Total rent amount{" "}
-            <strong style="colorFloat">
+            <strong className="colorFloat">
               &#8377;
               {this.totalAmount(this.state.products)}
             </strong>

@@ -66,7 +66,7 @@ export default class CheckoutPay extends React.Component {
               </Sider>
             </div>
           </Col>
-          <Col lg={9} sm={14}>
+          <Col lg={9} sm={14} style={{marginBottom:"30px"}}>
             <Card className="cardFormitem">
               <h4 style={{ paddingBottom: "20px" }}>
                 <strong>Enter Card Details</strong>

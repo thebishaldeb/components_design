@@ -82,9 +82,10 @@
   margin-bottom: 0;
 }
 
-.themeColor {
-  background: #23b195;
-  color: white;
+.themeColor,
+.themeColor:hover {
+  background: #23b195 !important;
+  color: white !important;
   border-radius: 4px;
 }
 
@@ -139,9 +140,9 @@
   cursor: pointer;
 }
 
-.addressIcons {
+.addressIcons, .addressIcons:hover {
   border: 0;
-  color: #5d5f5f;
+  color: #5d5f5f !important;
   overflow: hidden;
 }
 
@@ -170,7 +171,8 @@
   box-shadow: 0 0 10px 4px rgba(49, 196, 167, 0.09);
 }
 
-.AddMoreproducts {
+.AddMoreproducts,
+.AddMoreproducts:hover {
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.2px;
@@ -190,18 +192,18 @@
 }
 
 .addCard {
-  border: solid 0.5px #23b195;
+  border: solid 0.5px #23b195 !important;
   padding: 5px 10%;
   float: right;
 }
 
 .addCard h4 {
   text-shadow: 0.5px 0 0;
-  color: #23b195;
+  color: #23b195 !important;
 }
 
 .cardFormitem {
-  border: solid 0.5px #23b195;
+  border: solid 0.5px #23b195 !important;
   padding: 20px;
 }
 
