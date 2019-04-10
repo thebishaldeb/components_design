@@ -11,40 +11,16 @@ export default class OrderCard extends React.Component {
         </h3>
         <Row>
           <Col span={9}>
-            <img
-              src={this.props.product.image}
-              alt=""
-              style={{
-                width: "100%",
-                paddingRight: "15px",
-                height: "60px"
-              }}
-            />
+            <img src={this.props.product.image} alt="" className="orderImage" />
           </Col>
           <Col span={13}>
-            <h4
-              style={{
-                fontSize: "13px",
-                lineHeight: "14px",
-                color: "#4a4a4a",
-                letterSpacing: "0.1px",
-                textAlign: "justify"
-              }}
-            >
-              {this.props.product.name}
-            </h4>
+            <h4 className="itemName">{this.props.product.name}</h4>
           </Col>
         </Row>
         <br />
         <Row>
           <Col span={20}>
-            <h5
-              style={{
-                fontSize: "11px",
-                color: "#4a4a4a",
-                letterSpacing: "1px"
-              }}
-            >
+            <h5 className="lightText">
               Rental Period <br />
               <strong>
                 {this.props.product.date.start}-{this.props.product.date.end}
@@ -52,14 +28,7 @@ export default class OrderCard extends React.Component {
             </h5>
           </Col>
           <Col span={4}>
-            <h5
-              style={{
-                fontSize: "11px",
-                color: "#4a4a4a",
-                letterSpacing: "1px",
-                float: "right"
-              }}
-            >
+            <h5 className="noOfDays">
               <strong>
                 Days <br />
                 {this.props.product.days}
@@ -72,13 +41,7 @@ export default class OrderCard extends React.Component {
           Cart Summary
         </h3>
         {this.props.paid === true ? (
-          <h5
-            style={{
-              fontSize: "11px",
-              color: "#4a4a4a",
-              letterSpacing: "1px"
-            }}
-          >
+          <h5 className="lightText">
             Total rent amount{" "}
             <strong style={{ float: "right" }}>
               &#8377;
@@ -86,15 +49,9 @@ export default class OrderCard extends React.Component {
             </strong>
           </h5>
         ) : (
-          <h4
-            style={{
-              fontSize: "15px",
-              textShadow: "0.5px 0 0",
-              lineHeight: "15px"
-            }}
-          >
+          <h4 className="rentAmount">
             Total rent amount{" "}
-            <strong style={{ float: "right", color: "#23b195" }}>
+            <strong className="colorFloat">
               &#8377;
               {this.props.product.totalRent}
             </strong>
@@ -113,15 +70,9 @@ export default class OrderCard extends React.Component {
           </strong>
         </h5>
         {this.props.paid === true ? (
-          <h5
-            style={{
-              fontSize: "11px",
-              color: "#4a4a4a",
-              letterSpacing: "1px"
-            }}
-          >
+          <h5 className="lightText">
             You paid{" "}
-            <strong style={{ float: "right", color: "#23b195" }}>
+            <strong className="colorFloat">
               &#8377; {this.props.product.youPaid.amount}
             </strong>
             <h6 style={{ color: "#676767" }}>
@@ -130,14 +81,7 @@ export default class OrderCard extends React.Component {
           </h5>
         ) : null}
         <br />
-        <Button
-          style={{
-            background: "#23b195",
-            color: "#fff",
-            borderRadius: "4px"
-          }}
-          block
-        >
+        <Button className="themeColor" block>
           {this.props.buttonText}
         </Button>
       </Card>

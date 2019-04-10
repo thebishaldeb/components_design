@@ -36,11 +36,7 @@ export default class CheckoutPay extends React.Component {
           <CheckoutSteps step={1} />
           <Col span={24}>
             <h3
-              style={{
-                fontSize: "15px",
-                textShadow: "0.6px 0 0",
-                letterSpacing: "0.2px"
-              }}
+              className="billingAddress"
             >
               Billing Address
             </h3>
@@ -55,20 +51,10 @@ export default class CheckoutPay extends React.Component {
                 style={{ paddingBottom: "30px" }}
               >
                 <div
-                  style={{
-                    fontSize: "12px",
-                    padding: "20px",
-                    paddingBottom: "40px",
-                    backgroundColor: "rgba(35, 177, 149, 0.2)",
-                    width: "100%"
-                  }}
+                  className="HomeAddress"
                 >
                   <div
-                    style={{
-                      fontSize: "14px",
-                      textShadow: "0.7px 0 0",
-                      letterSpacing: "0.3px"
-                    }}
+                    className="HomeAddressBlock"
                   >
                     Home Address{" "}
                     <Icon
@@ -77,43 +63,39 @@ export default class CheckoutPay extends React.Component {
                     />
                   </div>
                   <br />
-                  <h4 style={{ lineHeight: "12px", color: "#5d5f5f" }}>
+                  <h4 className="addressLines">
                     {this.state.address.name},
                   </h4>
-                  <h4 style={{ lineHeight: "12px", color: "#5d5f5f" }}>
+                  <h4 className="addressLines">
                     {this.state.address.address1},
                   </h4>
-                  <h4 style={{ lineHeight: "12px", color: "#5d5f5f" }}>
+                  <h4 className="addressLines">
                     {this.state.address.address2},
                   </h4>
-                  <h4 style={{ lineHeight: "12px", color: "#5d5f5f" }}>
+                  <h4 className="addressLines">
                     {this.state.address.state}.
                   </h4>
-                  <h4 style={{ lineHeight: "12px", color: "#5d5f5f" }}>
+                  <h4 className="addressLines">
                     {this.state.address.PIN}
                   </h4>
-                  <h4 style={{ lineHeight: "12px", color: "#5d5f5f" }}>
+                  <h4 className="addressLines">
                     Mobile: {this.state.address.mobile}
                   </h4>
                   <div style={{ float: "right" }}>
                     <Button
                       style={{
-                        border: 0,
-                        color: "#5d5f5f",
-                        overflow: "hidden",
                         padding: "0 15px"
                       }}
+                      className="addressIcons"
                       ghost
                     >
                       <Icon type="edit" />
                     </Button>
                     <Button
                       style={{
-                        border: 0,
-                        color: "#5d5f5f",
-                        overflow: "hidden",
                         padding: 0
                       }}
+                      className="addressIcons"
                       ghost
                     >
                       <Icon type="delete" />
@@ -128,22 +110,11 @@ export default class CheckoutPay extends React.Component {
                 style={{ paddingBottom: "30px" }}
               >
                 <div
-                  style={{
-                    width: "100%",
-                    textAlign: "center",
-                    border: "1px solid #ddd",
-                    padding: "35px 20px",
-                    cursor: "pointer"
-                  }}
+                  className="AddNewAddressBlock"
                   //   onClick={}
                 >
                   <div
-                    style={{
-                      fontSize: "70px",
-                      lineHeight: "75px",
-                      textShadow: "1px 0 0",
-                      color: "#ddd"
-                    }}
+                    className="AddNewAddress"
                   >
                     <Icon type="plus" />
                   </div>

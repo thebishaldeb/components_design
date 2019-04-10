@@ -30,52 +30,47 @@ export default class CheckoutCart extends React.Component {
         <h2 style={{ textShadow: "0.5px 0 0", fontSize: "19px" }}>
           Cart Summary
         </h2>
-        <p style={{ fontSize: "12px" }}>
-          Rent per day{" "}
-          <div style={{ float: "right" }}>
-            &#8377; {this.state.products.rent}
-          </div>
-        </p>
-        <p style={{ fontSize: "12px" }}>
-          Service fee <div style={{ float: "right" }}>&#8377; 100</div>
-        </p>
-        <p style={{ fontSize: "12px" }}>
-          &#8377; {this.state.products.rent}/- <Icon type="close" />{" "}
-          {this.state.products.days}days{" "}
-          <div style={{ float: "right" }}>
-            &#8377; {this.state.products.rent * this.state.products.days}
-          </div>
-        </p>
-        <p style={{ fontSize: "12px" }}>
-          25% Multi day discount{" "}
-          <div style={{ float: "right", color: "#23b195" }}>
-            -&#8377;
-            {0.25 * this.state.products.rent * this.state.products.days}
-          </div>
-        </p>
+        <div style={{ fontSize: "12px" }}>
+          <p>
+            Rent per day{" "}
+            <div style={{ float: "right" }}>
+              &#8377; {this.state.products.rent}
+            </div>
+          </p>
+          <p>
+            Service fee <div style={{ float: "right" }}>&#8377; 100</div>
+          </p>
+          <p>
+            &#8377; {this.state.products.rent}/- <Icon type="close" />{" "}
+            {this.state.products.days}days{" "}
+            <div style={{ float: "right" }}>
+              &#8377; {this.state.products.rent * this.state.products.days}
+            </div>
+          </p>
+          <p>
+            25% Multi day discount{" "}
+            <div style="colorFloat">
+              -&#8377;
+              {0.25 * this.state.products.rent * this.state.products.days}
+            </div>
+          </p>
+          <br />
+          <h3>
+            Total rent amount{" "}
+            <strong style="colorFloat">
+              &#8377;
+              {this.totalAmount(this.state.products)}
+            </strong>
+          </h3>
+          <p>
+            Refundable deposit{" "}
+            <div style={{ float: "right" }}>
+              &#8377; {this.state.products.refund}
+            </div>
+          </p>
+        </div>
         <br />
-        <h3>
-          Total rent amount{" "}
-          <strong style={{ float: "right", color: "#23b195" }}>
-            &#8377;
-            {this.totalAmount(this.state.products)}
-          </strong>
-        </h3>
-        <p style={{ fontSize: "12px" }}>
-          Refundable deposit{" "}
-          <div style={{ float: "right" }}>
-            &#8377; {this.state.products.refund}
-          </div>
-        </p>
-        <br />
-        <Button
-          style={{
-            background: "#23b195",
-            color: "#fff",
-            borderRadius: "4px"
-          }}
-          block
-        >
+        <Button className="themeColor" block>
           Checkout
         </Button>
       </Card>
@@ -91,7 +86,7 @@ export default class CheckoutCart extends React.Component {
     return (
       <div style={{ padding: "20px 8%" }}>
         <Row>
-          <CheckoutSteps step={0}/>
+          <CheckoutSteps step={0} />
           <Col span={12}>
             <div style={{ fontSize: "14px" }}>
               <strong>My cart - </strong>1 items
@@ -101,15 +96,7 @@ export default class CheckoutCart extends React.Component {
             </div>
           </Col>
           <Col span={12}>
-            <Link
-              to=""
-              style={{
-                fontSize: "14px",
-                fontWeight: 500,
-                letterSpacing: "0.2px",
-                color: "#23b195"
-              }}
-            >
+            <Link to="" className="AddMoreproducts">
               Add more products
             </Link>
           </Col>
@@ -137,12 +124,7 @@ export default class CheckoutCart extends React.Component {
 class CartItem extends React.Component {
   render() {
     return (
-      <Row
-        style={{
-          borderRadius: "9px",
-          boxShadow: "0 0 10px 4px rgba(49, 196, 167, 0.09)"
-        }}
-      >
+      <Row className="cartitem">
         <Col span={8}>
           <img
             style={{ width: "100%", height: 160 }}
@@ -156,16 +138,7 @@ class CartItem extends React.Component {
             }}
           >
             <Col span={16}>
-              <h3
-                style={{
-                  fontSize: "14px",
-                  color: "#4a4a4a",
-                  marginBottom: "2%",
-                  overflow: "hidden"
-                }}
-              >
-                {this.props.products.name}
-              </h3>
+              <h3 className="productname">{this.props.products.name}</h3>
             </Col>
             <Col lg={10} sm={12} xs={13} style={{ fontSize: "11.5px" }}>
               Refundundable deposit
@@ -191,15 +164,7 @@ class CartItem extends React.Component {
             </Col>
           </Row>
         </Col>
-        <div
-          style={{
-            float: "right",
-            position: "absolute",
-            top: 0,
-            right: 0,
-            overflow: "hidden"
-          }}
-        >
+        <div className="listcloseicons">
           <Button style={{ border: 0 }}>
             <Icon type="edit" />
           </Button>

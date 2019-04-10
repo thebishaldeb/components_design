@@ -67,39 +67,48 @@ export default class CheckoutPay extends React.Component {
             </div>
           </Col>
           <Col lg={9} sm={14}>
-            <Card style={{ border: "solid 0.5px #23b195", marginBottom:"20px" }}>
+            <Card className="cardFormitem">
               <h4 style={{ paddingBottom: "20px" }}>
                 <strong>Enter Card Details</strong>
               </h4>
               <Form layout="vertical">
                 <Form.Item>
-                  <Input placeholder="Name on card" type="text" style={{ border: "solid 0.5px #23b195", padding:"20px" }} />
+                  <Input
+                    placeholder="Name on card"
+                    type="text"
+                    className="cardFormitem"
+                  />
                 </Form.Item>
-                <Form.Item >
-                  <Input placeholder="Card Number" type="text" style={{ border: "solid 0.5px #23b195", padding:"20px" }} />
+                <Form.Item>
+                  <Input
+                    placeholder="Card Number"
+                    type="text"
+                    className="cardFormitem"
+                  />
                 </Form.Item>
                 <Row gutter={32}>
                   <Col span={12}>
-                    <Form.Item >
-                      <Input placeholder="Expiry date" type="text" style={{ border: "solid 0.5px #23b195", padding:"20px" }}/>
+                    <Form.Item>
+                      <Input
+                        placeholder="Expiry date"
+                        type="text"
+                        className="cardFormitem"
+                      />
                     </Form.Item>
                   </Col>
                   <Col span={12}>
-                    <Form.Item >
-                      <Input placeholder="CVV" type="text" style={{ border: "solid 0.5px #23b195", padding:"20px" }}/>
+                    <Form.Item>
+                      <Input
+                        placeholder="CVV"
+                        type="text"
+                        className="cardFormitem"
+                      />
                     </Form.Item>
                   </Col>
                 </Row>
                 <Form.Item>
-                  <Button
-                  
-                    style={{
-                        border: "solid 0.5px #23b195",
-                      padding: "5px 10%",
-                      float: "right"
-                    }}
-                  >
-                    <h4 style={{textShadow:"0.5px 0 0", color:"#23b195"}}>Add Card</h4>
+                  <Button className="addCard">
+                    <h4>Add Card</h4>
                   </Button>
                 </Form.Item>
               </Form>
