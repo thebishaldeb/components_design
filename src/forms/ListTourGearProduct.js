@@ -72,9 +72,9 @@ class ListTourGearProduct extends Component {
   };
   classNamesgroup(e) {
     if (this.state.value === e) {
-      return "ActiveCond";
+      return "ActiveCond prodDiv";
     } else {
-      return "NotActive";
+      return "NotActive prodDiv";
     }
   }
   renderCategory(e) {
@@ -102,12 +102,12 @@ class ListTourGearProduct extends Component {
       </div>
     );
     return (
-      <div style={{ padding: "20px" }}>
+      <div className="Listyourgearcards">
         <Row>
           <Col
             md={{ span: 14, offset: 5 }}
             sm={{ span: 20, offset: 2 }}
-            style={{ padding: "24px auto" }}
+            className="LYGcol1"
           >
             <ListYGSteps step={1} />
             <Form layout="vertical">
@@ -121,8 +121,8 @@ class ListTourGearProduct extends Component {
                 <Input type="text" />
               </Form.Item>
               <Form.Item label={<strong>In the package</strong>}>
-                <p style={{ fontSize: "10px" }}>Select your offering</p>
-                <Checkbox.Group style={{ width: "100%" }}>
+                <p className="font10">Select your offering</p>
+                <Checkbox.Group width={"100%"}>
                   <Row gutter={16}>
                     {this.state.package.map(item => (
                       <Col span={12}>
@@ -133,18 +133,17 @@ class ListTourGearProduct extends Component {
                 </Checkbox.Group>
               </Form.Item>
               <Form.Item label={<strong>Gear category</strong>}>
-                <p style={{ fontSize: "10px" }}>
+                <p className="font10">
                   Select the closest category your gear belongs to
                 </p>
                 <Row gutter={16}>
                   {this.state.category.map(item => (
-                    <Col md={6} xs={8} style={{ textAlign: "center" }}>
+                    <Col md={6} xs={8}>
                       <div
                         onClick={e => this.renderCategory(item.name)}
                         className={this.classNamesgroup(item.name)}
-                        style={{ padding: "50px", height: "200px" }}
                       >
-                        <div style={{ fontSize: "50px" }}>
+                        <div>
                           <Icon type={item.icon} />
                         </div>
                         <h5>{item.name}</h5>
@@ -154,7 +153,7 @@ class ListTourGearProduct extends Component {
                 </Row>
               </Form.Item>
               <Form.Item label={<strong>Upload Images</strong>}>
-                <p style={{ fontSize: "10px" }}>
+                <p className="font10">
                   Upload upto 4 images in jpj, jpeg, png format.
                 </p>
                 <Upload
@@ -171,7 +170,7 @@ class ListTourGearProduct extends Component {
                   footer={null}
                   onCancel={this.handleCancel}
                 >
-                  <img alt="" style={{ width: "100%" }} src={previewImage} />
+                  <img alt="" width={"100%"} src={previewImage} />
                 </Modal>
               </Form.Item>
               <Row gutter={32}>
@@ -190,11 +189,7 @@ class ListTourGearProduct extends Component {
                 <TextArea rows="6" />
               </Form.Item>
               <Form.Item>
-                <Button
-                  className="listSubmitButton"
-                >
-                  Next
-                </Button>
+                <Button className="listSubmitButton">Next</Button>
               </Form.Item>
             </Form>
           </Col>

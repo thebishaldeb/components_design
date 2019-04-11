@@ -9,9 +9,9 @@ class ListTourGearRental extends Component {
   };
   classNamesgroup(e) {
     if (this.state.value === e) {
-      return "ActiveCond";
+      return "ActiveCond prodCond";
     } else {
-      return "NotActive";
+      return "NotActive prodCond";
     }
   }
   renderCondition(e) {
@@ -19,14 +19,12 @@ class ListTourGearRental extends Component {
   }
   render() {
     return (
-      <div style={{ padding: "20px" }}>
+      <div className="Listyourgearcards">
         <Row>
           <Col
             md={{ span: 14, offset: 5 }}
             sm={{ span: 20, offset: 2 }}
-            style={{
-              padding: "24px auto"
-            }}
+            className="LYGcol1"
           >
             <ListYGSteps step={2} />
             <Form layout="vertical">
@@ -61,7 +59,7 @@ class ListTourGearRental extends Component {
                 </Row>
               </Form.Item>
               <Form.Item label={<strong>Benefits you offer</strong>}>
-                <Checkbox.Group style={{ width: "100%" }}>
+                <Checkbox.Group width={"100%"}>
                   <Col span={24}>
                     <Checkbox value="Delivery">Delivery</Checkbox>
                   </Col>
@@ -70,11 +68,8 @@ class ListTourGearRental extends Component {
                   </Col>
                 </Checkbox.Group>
               </Form.Item>
-
               <Form.Item label={<strong>Product condition</strong>}>
-                <p
-                  className="selectfit"
-                >
+                <p className="selectfit">
                   Select the one your product best fits into.
                 </p>
                 <Row gutter={24}>
@@ -82,10 +77,9 @@ class ListTourGearRental extends Component {
                     <div
                       onClick={e => this.renderCondition("excellent")}
                       className={this.classNamesgroup("excellent")}
-                      style={{ fontSize: "12px", padding: "10%" }}
                     >
                       <h3> Excellent</h3>
-                      <ul style={{ paddingLeft: "22px" }}>
+                      <ul>
                         {" "}
                         <li>No repair history</li>
                         <li>0-6 months old</li>
@@ -98,10 +92,9 @@ class ListTourGearRental extends Component {
                     <div
                       onClick={e => this.renderCondition("good")}
                       className={this.classNamesgroup("good")}
-                      style={{ fontSize: "12px", padding: "10%" }}
                     >
                       <h3> Good</h3>
-                      <ul style={{ paddingLeft: "22px" }}>
+                      <ul>
                         {" "}
                         <li>Minor repairs</li>
                         <li>6 months - 1 year old</li>
@@ -114,10 +107,9 @@ class ListTourGearRental extends Component {
                     <div
                       onClick={e => this.renderCondition("fairly used")}
                       className={this.classNamesgroup("fairly used")}
-                      style={{ fontSize: "12px", padding: "10%" }}
                     >
                       <h3> Fairly used</h3>
-                      <ul style={{ paddingLeft: "22px" }}>
+                      <ul>
                         {" "}
                         <li>No repair history</li>
                         <li>1-2 years old</li>

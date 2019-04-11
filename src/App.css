@@ -326,3 +326,44 @@
   font-size: 12px;
   line-height: 12px;
 }
+
+.Listyourgearcards {
+  padding: 20px;
+}
+
+.LYGcol1 {
+  padding: 24px auto;
+  background: #fff;
+}
+
+.addLocThatYouServe {
+  line-height: 13px;
+}
+
+.startLoc {
+  line-height: 13px;
+  font-size: 13px;
+}
+
+.font10 {
+  font-size: 10px;
+}
+
+.prodDiv {
+  padding: 50px;
+  height: 200px;
+  text-align: center;
+}
+
+.prodDiv div {
+  font-size: 50px;
+}
+
+.prodCond {
+  font-size: 12px;
+  padding: 10%;
+}
+
+.prodCond ul {
+  padding-left: 22px;
+}

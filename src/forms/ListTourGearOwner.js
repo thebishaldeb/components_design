@@ -7,15 +7,12 @@ import TextArea from "antd/lib/input/TextArea";
 class ListTourGearOwner extends Component {
   render() {
     return (
-      <div style={{ padding: "20px" }}>
+      <div className="Listyourgearcards">
         <Row>
           <Col
             md={{ span: 14, offset: 5 }}
             sm={{ span: 20, offset: 2 }}
-            style={{
-              padding: "24px auto",
-              background: "#fff"
-            }}
+            className="LYGcol1"
           >
             <ListYGSteps step={0} />
             <Form layout="vertical">
@@ -48,12 +45,12 @@ class ListTourGearOwner extends Component {
               </Form.Item>
               <Form.Item
                 label={
-                  <strong style={{ lineHeight: "13px" }}>
+                  <strong className="addLocThatYouServe">
                     Add locations you serve
                   </strong>
                 }
               >
-                <p style={{ lineHeight: "13px", fontSize: "13px" }}>
+                <p className="startLoc">
                   Start entering the locality, landmark, zip code (Separated by
                   comma)
                 </p>
