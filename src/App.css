@@ -190,11 +190,23 @@
   border: 0;
   color: #5d5f5f !important;
   overflow: hidden;
+  padding: 0;
+  padding-left: 15px;
+  float: right;
 }
 
-.addressLines {
-  line-height: 12px;
+.homeicon {
+  float: right;
   color: #5d5f5f;
+}
+
+.addressLines h4 {
+  line-height: 12px;
+  color: #5d5f5f !important;
+}
+
+.homeCol {
+  padding-bottom: 30px;
 }
 
 .listcloseicons {
@@ -202,6 +214,28 @@
   position: absolute;
   top: 0;
   right: 0;
+  overflow: hidden;
+}
+
+.checkoutDiv {
+  padding: 20px 8%;
+}
+
+.checkSlider {
+  background: #fff;
+  padding: 40px 0;
+}
+
+.checkSlider h4 {
+  padding: 0 20px;
+}
+
+.ColMenu {
+  border: 0.5px solid #ddd;
+}
+
+.ColMenu div {
+  min-width: 100%;
   overflow: hidden;
 }
 
@@ -215,6 +249,11 @@
 .cartitem {
   border-radius: 9px;
   box-shadow: 0 0 10px 4px rgba(49, 196, 167, 0.09);
+}
+
+.cartitem img {
+  width: 100%;
+  height: 160px;
 }
 
 .AddMoreproducts,
@@ -248,9 +287,17 @@
   color: #23b195 !important;
 }
 
+.ColPad {
+  padding: 12px 15px;
+}
+
 .cardFormitem {
   border: solid 0.5px #23b195 !important;
-  padding: 20px;
+  padding: 20px !important;
+}
+
+.cardFormChead {
+  padding-bottom: 20px;
 }
 
 .checkoutSteps {
@@ -286,6 +333,10 @@
   height: 60px;
 }
 
+.cartSum {
+  text-shadow: 0.5px 0 0;
+  font-size: 19px;
+}
 /* List your gear form */
 
 .listSubmitButton {
@@ -306,6 +357,7 @@
   font-size: 10px;
   float: right;
   width: 28%;
+  color: #23b195 !important;
 }
 
 .uploadButton {
@@ -347,6 +399,33 @@
 
 .font10 {
   font-size: 10px;
+}
+
+.font11h {
+  font-size: 11.5px;
+}
+
+.font12 {
+  font-size: 12px;
+}
+
+.font14 {
+  font-size: 14px;
+}
+
+.margin20 {
+  margin: 20px 0;
+}
+
+.marginB30 {
+  margin-bottom: 30px;
+}
+.borderzero {
+  border: 0 !important;
+}
+
+.rightfloat {
+  float: right;
 }
 
 .prodDiv {

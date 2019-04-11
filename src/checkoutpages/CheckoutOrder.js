@@ -27,7 +27,7 @@ export default class CheckoutOrder extends React.Component {
 
   render() {
     return (
-      <div style={{ padding: "20px 8%" }}>
+      <div className="checkoutDiv">
         <Row>
           <CheckoutSteps step={3} />
           <Col

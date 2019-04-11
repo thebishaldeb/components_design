@@ -26,28 +26,23 @@ export default class CheckoutPay extends React.Component {
 
   render() {
     return (
-      <div style={{ padding: "20px 8%" }}>
+      <div className="checkoutDiv">
         <Row gutter={32}>
           <CheckoutSteps step={2} />
-          <Col lg={6} sm={10} style={{ border: "0.5px solid #ddd" }}>
+          <Col lg={6} sm={10} className="ColMenu">
             <div
-              style={{
-                minWidth: "100%",
-                overflow: "hidden"
-              }}
             >
               <Sider
                 width={550}
-                style={{ background: "#fff", padding: "40px 0" }}
+                className="checkSlider"
               >
-                <h4 style={{ padding: "0 20px" }}>
+                <h4>
                   <strong>Choose payment option</strong>
                 </h4>
                 <Menu
                   mode="inline"
                   defaultSelectedKeys={["1"]}
                   defaultOpenKeys={["sub1"]}
-                  style={{ height: "100%" }}
                   className="AccountDetails"
                 >
                   <Item className="AccDetItem" key="1">
@@ -66,9 +61,9 @@ export default class CheckoutPay extends React.Component {
               </Sider>
             </div>
           </Col>
-          <Col lg={9} sm={14} style={{marginBottom:"30px"}}>
-            <Card className="cardFormitem">
-              <h4 style={{ paddingBottom: "20px" }}>
+          <Col lg={9} sm={14} className="marginB30">
+            <Card>
+              <h4 className="cardFormChead">
                 <strong>Enter Card Details</strong>
               </h4>
               <Form layout="vertical">

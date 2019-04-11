@@ -22,28 +22,22 @@ export default class CheckoutCart extends React.Component {
 
   cartTotal() {
     return (
-      <Card
-        style={{
-          margin: "20px 0"
-        }}
-      >
-        <h2 style={{ textShadow: "0.5px 0 0", fontSize: "19px" }}>
+      <Card className="margin20">
+        <h2 className="cartSum">
           Cart Summary
         </h2>
-        <div style={{ fontSize: "12px" }}>
+        <div className="font12">
           <p>
             Rent per day{" "}
-            <div style={{ float: "right" }}>
-              &#8377; {this.state.products.rent}
-            </div>
+            <div className="rightfloat">&#8377; {this.state.products.rent}</div>
           </p>
           <p>
-            Service fee <div style={{ float: "right" }}>&#8377; 100</div>
+            Service fee <div className="rightfloat">&#8377; 100</div>
           </p>
           <p>
             &#8377; {this.state.products.rent}/- <Icon type="close" />{" "}
             {this.state.products.days}days{" "}
-            <div style={{ float: "right" }}>
+            <div className="rightfloat">
               &#8377; {this.state.products.rent * this.state.products.days}
             </div>
           </p>
@@ -64,7 +58,7 @@ export default class CheckoutCart extends React.Component {
           </h3>
           <p>
             Refundable deposit{" "}
-            <div style={{ float: "right" }}>
+            <div className="rightfloat">
               &#8377; {this.state.products.refund}
             </div>
           </p>
@@ -84,14 +78,14 @@ export default class CheckoutCart extends React.Component {
   }
   render() {
     return (
-      <div style={{ padding: "20px 8%" }}>
+      <div className="checkoutDiv">
         <Row>
           <CheckoutSteps step={0} />
-          <Col span={12}>
-            <div style={{ fontSize: "14px" }}>
+          <Col span={12} className="font14">
+            <div>
               <strong>My cart - </strong>1 items
             </div>
-            <div style={{ fontSize: "14px" }}>
+            <div>
               Total rent: <strong>&#8377; {this.state.products.rent} </strong>
             </div>
           </Col>
@@ -100,11 +94,7 @@ export default class CheckoutCart extends React.Component {
               Add more products
             </Link>
           </Col>
-          <Col
-            style={{ margin: "20px 0" }}
-            md={13}
-            sm={{ span: 22, offset: 1 }}
-          >
+          <Col md={13} sm={{ span: 22, offset: 1 }} className="margin20">
             <CartItem products={this.state.products} />
           </Col>
           <Col
@@ -126,24 +116,17 @@ class CartItem extends React.Component {
     return (
       <Row className="cartitem">
         <Col span={8}>
-          <img
-            style={{ width: "100%", height: 160 }}
-            src={this.props.products.image}
-          />
+          <img alt="" src={this.props.products.image} />
         </Col>
-        <Col span={16} style={{ padding: "12px 15px" }}>
-          <Row
-            style={{
-              fontSize: "12px"
-            }}
-          >
+        <Col span={16} className="ColPad">
+          <Row className="font12">
             <Col span={16}>
               <h3 className="productname">{this.props.products.name}</h3>
             </Col>
-            <Col lg={10} sm={12} xs={13} style={{ fontSize: "11.5px" }}>
+            <Col lg={10} sm={12} xs={13} className="font11h">
               Refundundable deposit
               <br />
-              <strong style={{ color: "#23b195" }}>
+              <strong className="colorCursor">
                 &#8377; {this.props.products.refund}
               </strong>
               <br />
@@ -154,7 +137,7 @@ class CartItem extends React.Component {
                 {this.props.products.date.end}
               </strong>
             </Col>
-            <Col lg={10} sm={12} xs={11} style={{ fontSize: "11.5px" }}>
+            <Col lg={10} sm={12} xs={11} className="font11h">
               Rent <br />
               <strong>&#8377; {this.props.products.rent}</strong>
               <br />
@@ -165,10 +148,10 @@ class CartItem extends React.Component {
           </Row>
         </Col>
         <div className="listcloseicons">
-          <Button style={{ border: 0 }}>
+          <Button className="borderzero">
             <Icon type="edit" />
           </Button>
-          <Button style={{ border: 0 }}>
+          <Button className="borderzero">
             <Icon type="close" />
           </Button>
         </div>

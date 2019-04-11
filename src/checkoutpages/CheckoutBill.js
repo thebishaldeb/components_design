@@ -31,15 +31,11 @@ export default class CheckoutPay extends React.Component {
 
   render() {
     return (
-      <div style={{ padding: "20px 8%" }}>
+      <div className="checkoutDiv">
         <Row gutter={32}>
           <CheckoutSteps step={1} />
           <Col span={24}>
-            <h3
-              className="billingAddress"
-            >
-              Billing Address
-            </h3>
+            <h3 className="billingAddress">Billing Address</h3>
             <br />
           </Col>
           <Col lg={14} sm={24}>
@@ -48,74 +44,40 @@ export default class CheckoutPay extends React.Component {
                 xs={{ span: 18, offset: 3 }}
                 sm={{ span: 12, offset: 0 }}
                 md={{ span: 10, offset: 0 }}
-                style={{ paddingBottom: "30px" }}
+                className="homeCol"
               >
-                <div
-                  className="HomeAddress"
-                >
-                  <div
-                    className="HomeAddressBlock"
-                  >
-                    Home Address{" "}
-                    <Icon
-                      type="home"
-                      style={{ float: "right", color: "#5d5f5f" }}
-                    />
+                <div className="HomeAddress">
+                  <div className="HomeAddressBlock">
+                    Home Address <Icon type="home" className="homeicon" />
                   </div>
                   <br />
-                  <h4 className="addressLines">
-                    {this.state.address.name},
-                  </h4>
-                  <h4 className="addressLines">
-                    {this.state.address.address1},
-                  </h4>
-                  <h4 className="addressLines">
-                    {this.state.address.address2},
-                  </h4>
-                  <h4 className="addressLines">
-                    {this.state.address.state}.
-                  </h4>
-                  <h4 className="addressLines">
-                    {this.state.address.PIN}
-                  </h4>
-                  <h4 className="addressLines">
-                    Mobile: {this.state.address.mobile}
-                  </h4>
-                  <div style={{ float: "right" }}>
-                    <Button
-                      style={{
-                        padding: "0 15px"
-                      }}
-                      className="addressIcons"
-                      ghost
-                    >
-                      <Icon type="edit" />
-                    </Button>
-                    <Button
-                      style={{
-                        padding: 0
-                      }}
-                      className="addressIcons"
-                      ghost
-                    >
-                      <Icon type="delete" />
-                    </Button>
+                  <div className="addressLines">
+                    <h4>{this.state.address.name},</h4>
+                    <h4>{this.state.address.address1},</h4>
+                    <h4>{this.state.address.address2},</h4>
+                    <h4>{this.state.address.state}.</h4>
+                    <h4>{this.state.address.PIN}</h4>
+                    <h4>Mobile: {this.state.address.mobile}</h4>
                   </div>
+                  <Button className="addressIcons" ghost>
+                    <Icon type="delete" />
+                  </Button>
+                  <Button className="addressIcons" ghost>
+                    <Icon type="edit" />
+                  </Button>
                 </div>
               </Col>
               <Col
                 xs={{ span: 14, offset: 5 }}
                 sm={{ span: 10, offset: 0 }}
                 md={{ span: 8, offset: 0 }}
-                style={{ paddingBottom: "30px" }}
+                className="homeCol"
               >
                 <div
                   className="AddNewAddressBlock"
                   //   onClick={}
                 >
-                  <div
-                    className="AddNewAddress"
-                  >
+                  <div className="AddNewAddress">
                     <Icon type="plus" />
                   </div>
                   <h5>Add a new address</h5>
