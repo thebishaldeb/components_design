@@ -15,24 +15,10 @@ class SignIn extends Component {
           </Form.Item>
           <Form.Item className="paddingMarginBottom">
             <Input type="password" placeholder="Password" />
-            <Link
-              style={{
-                color: "#23b195",
-                fontSize: "11px",
-                letterSpacing: "0.8px",
-                float: "right"
-              }}
-              to="/"
-            >
+            <Link className="forgotpass" to="/">
               Forgot password?
             </Link>
-            <Button
-              style={{
-                marginTop: "10px"
-              }}
-              className="themeColor"
-              block
-            >
+            <Button className="themeColor" block>
               Sign In
             </Button>
             <p className="belowFormtext">
@@ -96,66 +82,36 @@ export default class SignInAndSignUpCard extends Component {
   render() {
     return (
       <div>
-        <Row padding="0">
+        <Row>
           <Col span={8}>
             <img
               src={naruto2}
               alt=""
-              width={"100%"}
-              style={
-                this.state.SignInState === "signin"
-                  ? { height: "463px" }
-                  : { height: "504px" }
+              className={
+                this.state.SignInState === "signin" ? "signInimg" : "signupImg"
               }
             />
           </Col>
           <Col span={16}>
-            <Card style={{ padding: "0 10px 0 25px" }}>
-              <h2
-                style={{
-                  paddingBottom: "4px",
-                  fonWweight: 900,
-                  letterSpacing: "0.4px",
-                  textShadow: "1px 0 0"
-                }}
-              >
+            <Card className="modalcard">
+              <h2 className="signinstate">
                 {this.state.SignInState === "signin"
                   ? "Sign in to Lenshood"
                   : "Create Account"}
               </h2>
               <Row gutter={16}>
                 <Col span={12}>
-                  <Button
-                    style={{
-                      background: "#3c60a2",
-                      color: "white"
-                    }}
-                    block
-                  >
+                  <Button className="fbookbtn" block>
                     Facebook
                   </Button>
                 </Col>
                 <Col span={12}>
-                  <Button
-                    style={{
-                      background: "#c55643",
-                      color: "white"
-                    }}
-                    block
-                  >
+                  <Button className="googlebtn" block>
                     Google
                   </Button>
                 </Col>
               </Row>
-              <Divider
-                style={{
-                  color: "#999",
-                  fontSize: "10px",
-                  padding: "15px 50px 5px 50px"
-                }}
-              >
-                or via E-mail
-              </Divider>
+              <Divider className="viaEmail">or via E-mail</Divider>
               {this.state.SignInState === "signin" ? (
                 <SignIn setModal1Visible={this.setModal1Visible.bind(this)} />
               ) : (
